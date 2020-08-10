@@ -8,6 +8,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - uses: actions/checkout@v2
       - run: "sudo apt update && sudo apt install virtualbox"
       - run: "curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -"
       - run: sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
